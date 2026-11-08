@@ -1,0 +1,17 @@
+{
+  "name": "royal-salon-manager",
+  "version": "1.0.0",
+  "description": "Appointments, walk-in queue, customers and daily sales for Royal Hairdresser.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "pg": "^8.11.0"
+  }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Royal Hairdresser - Smart Salon Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <p class="crown" aria-hidden="true">♛</p>
+    <h1>Royal Hairdresser</h1>
+    <p class="sub" data-i18n="subtitle">Smart Salon Manager</p>
+  </div>
+  <div class="hbtns">
+    <button id="authBtn" type="button">Owner login</button>
+    <button id="lang" type="button">বাংলা</button>
+  </div>
+</header>
+
+<form class="card loginCard" id="loginCard" hidden>
+  <h2 data-i18n="loginTitle">Owner login</h2>
+  <label><span data-i18n="username">Username</span><input name="username" autocomplete="username" required></label>
+  <label><span data-i18n="password">Password</span><input name="password" type="password" autocomplete="current-password" required></label>
+  <button type="submit" data-i18n="loginBtn">Log in</button>
+  <p id="loginMsg" class="msg" aria-live="polite"></p>
+</form>
+<p id="private" class="notice privateNote" data-i18n="private" hidden></p>
+
+<main id="main" hidden>
+  <p id="readonly" class="notice" data-i18n="readonly" hidden></p>
+  <div class="card datebar">
+    <label><span data-i18n="date">Date</span><input id="date" type="date"></label>
+  </div>
+  <section class="stats" id="stats"></section>
+
+  <p id="msg" class="msg" aria-live="polite"></p>
+
+  <section class="card">
+    <h2 data-i18n="today">Appointments and queue</h2>
+    <div id="list"></div>
+  </section>
+
+  <form class="card" id="bookForm">
+    <h2 data-i18n="book">Book an appointment</h2>
+    <label><span data-i18n="name">Customer name</span><input name="customerName" maxlength="60" required></label>
+    <label><span data-i18n="phone">Mobile number</span><input name="phone" id="phone" inputmode="tel" placeholder="01XXXXXXXXX" required></label>
+    <p id="loyalty" class="loyalty" hidden></p>
+    <span class="lbl" data-i18n="services">Services</span>
+    <div id="chips" class="chips"></div>
+    <label><span data-i18n="stylist">Stylist</span><select name="stylist" id="stylist"></select></label>
+    <label><span data-i18n="when">Date and time</span><input name="start" id="start" type="datetime-local" required></label>
+    <p class="total" id="total"></p>
+    <button type="submit" data-i18n="bookBtn">Book</button>
+  </form>
+
+  <form class="card" id="walkForm">
+    <h2 data-i18n="walkin">Walk-in queue</h2>
+    <label><span data-i18n="name">Customer name</span><input name="customerName" maxlength="60"></label>
+    <label><span data-i18n="phoneOpt">Mobile number (optional)</span><input name="phone" inputmode="tel" placeholder="01XXXXXXXXX"></label>
+    <span class="lbl" data-i18n="services">Services</span>
+    <div id="chips2" class="chips"></div>
+    <button type="submit" data-i18n="addQueue">Add to queue</button>
+  </form>
+  <section class="card">
+    <h2 data-i18n="regulars">Regular customers</h2>
+    <div class="scroll"><table id="customers"></table></div>
+  </section>
+  <button id="backup" type="button" class="ghost" data-i18n="backup" hidden>Download backup</button>
+  <p class="muted" data-i18n="demo">Sample services and prices. Edit seed.json to match the salon's price list.</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

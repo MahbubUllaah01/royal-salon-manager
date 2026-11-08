@@ -1,0 +1,17 @@
+{
+  "note": "SAMPLE DATA. Service names, durations and prices are placeholders; edit them to match the salon's real price list.",
+  "shop": { "name": "Royal Hairdresser", "openHour": 10, "closeHour": 21, "loyaltyEvery": 5 },
+  "services": [
+    { "id": "haircut", "name": "Haircut", "bn": "চুল কাটা", "minutes": 30, "price": 250 },
+    { "id": "beard", "name": "Beard Trim", "bn": "দাড়ি ট্রিম", "minutes": 20, "price": 150 },
+    { "id": "shave", "name": "Shave", "bn": "শেভ", "minutes": 20, "price": 120 },
+    { "id": "wash", "name": "Hair Wash & Style", "bn": "চুল ধোয়া ও স্টাইল", "minutes": 20, "price": 150 },
+    { "id": "color", "name": "Hair Color", "bn": "চুলের রং", "minutes": 60, "price": 800 },
+    { "id": "facial", "name": "Facial", "bn": "ফেসিয়াল", "minutes": 45, "price": 600 },
+    { "id": "spa", "name": "Hair Spa", "bn": "হেয়ার স্পা", "minutes": 60, "price": 900 }
+  ],
+  "stylists": ["Stylist 1", "Stylist 2"],
+  "customers": {},
+  "appointments": [],
+  "tokens": {}
+}

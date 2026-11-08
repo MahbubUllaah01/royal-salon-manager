@@ -1,0 +1,51 @@
+:root{--ink:#17130c;--gold:#c9a24b;--gold-d:#9a7a2c;--cream:#faf6ec;--card:#fffdf8;--line:#e6dcc3;--muted:#76694b;--ok:#2f7d4f;--bad:#b3392f}
+*{box-sizing:border-box}
+main>*{min-width:0}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Poppins","Hind Siliguri",system-ui,sans-serif;line-height:1.5}
+body[data-lang="bn"]{font-family:"Hind Siliguri","Poppins",system-ui,sans-serif}
+header{background:#111;color:#fff;padding:18px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid var(--gold)}
+.crown{margin:0;color:var(--gold);font-size:1.4rem;line-height:1}
+h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:1.6rem;letter-spacing:.5px;color:var(--gold)}
+.sub{margin:2px 0 0;font-size:.8rem;opacity:.75;letter-spacing:1px;text-transform:uppercase}
+#lang{background:var(--gold);color:#111;border:0;border-radius:8px;padding:8px 12px;font:inherit;font-weight:600;cursor:pointer}
+main{max-width:900px;margin:0 auto;padding:14px;display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 2px 8px rgba(23,19,12,.06)}
+h2{margin:0 0 10px;font-family:"Playfair Display",Georgia,serif;font-size:1.15rem}
+label{display:block;font-size:.85rem;margin-bottom:10px}
+label span,.lbl{display:block;margin-bottom:4px;color:var(--muted);font-size:.85rem}
+input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+button[type=submit]{width:100%;background:#111;color:var(--gold);border:1px solid var(--gold);border-radius:8px;padding:11px;font:inherit;font-weight:600;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat{background:#111;color:#fff;border-radius:14px;padding:14px}
+.stat b{display:block;font-size:1.5rem;color:var(--gold)}
+.stat span{font-size:.78rem;opacity:.8}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.chip{border:1px solid var(--gold-d);background:#fff;color:var(--ink);border-radius:99px;padding:7px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+.chip.on{background:var(--gold);border-color:var(--gold-d);font-weight:600}
+.total{font-weight:600;margin:4px 0 12px}
+.loyalty{background:#fff4d6;border:1px solid var(--gold);border-radius:8px;padding:8px 10px;font-size:.85rem;margin:0 0 10px}
+.appt{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;background:#fff}
+.appt.done{opacity:.65}
+.top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.time{font-family:"Playfair Display",serif;font-weight:700;font-size:1.05rem}
+.tag{font-size:.72rem;padding:2px 9px;border-radius:99px;color:#fff;font-weight:600}
+.tag.booked{background:var(--gold-d)}.tag.waiting{background:#3a5ea8}.tag.completed{background:var(--ok)}.tag.cancelled,.tag.no-show{background:var(--bad)}
+.meta{font-size:.82rem;color:var(--muted);margin:4px 0 8px}
+.actions{display:flex;flex-wrap:wrap;gap:6px}
+.actions button,.actions a{border:1px solid var(--gold-d);background:#fff;color:var(--ink);border-radius:8px;padding:6px 10px;font:inherit;font-size:.78rem;cursor:pointer;text-decoration:none}
+.actions .go{background:var(--ok);border-color:var(--ok);color:#fff}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:420px}
+th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+.msg{min-height:1.4em;font-weight:600}
+.muted{font-size:.8rem;color:var(--muted)}
+@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
+
+.hbtns{display:flex;gap:8px;flex-shrink:0}
+#authBtn{background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:8px;padding:8px 12px;font-weight:600;cursor:pointer;font-family:inherit}
+.loginCard{max-width:420px;margin:14px auto 0;width:calc(100% - 28px)}
+.notice{background:#fff4d6;border:1px solid var(--gold);border-radius:10px;padding:10px 12px;font-size:.85rem;margin:0}
+.privateNote{max-width:420px;margin:14px auto;width:calc(100% - 28px)}
+button.ghost{background:#fff;color:var(--ink);border:1px solid var(--gold-d);border-radius:8px;padding:10px;font:inherit;font-weight:600;cursor:pointer}
+[hidden]{display:none!important}
